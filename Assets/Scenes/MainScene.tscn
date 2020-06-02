@@ -1,0 +1,254 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Fonts/19413.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Scenes/MainScene.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Sprites/HUD/Artboard 44.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 72
+outline_size = 1
+outline_color = Color( 0, 0.329412, 0.423529, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0.329412, 0.423529, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 64
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 70
+outline_size = 2
+outline_color = Color( 0, 0.329412, 0.423529, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 70
+outline_size = 2
+outline_color = Color( 0, 0.329412, 0.423529, 1 )
+font_data = ExtResource( 1 )
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.658824, 0.823529, 0.94902, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+anchor_right = 1.0
+margin_top = 50.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0.419608, 0.619608, 1 )
+text = "Слоги-слияния"
+align = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -170.5
+margin_top = -29.5
+margin_right = 170.5
+margin_bottom = 149.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="TextureButton" parent="Control/VBoxContainer"]
+margin_right = 341.0
+margin_bottom = 57.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0.419608, 0.619608, 1 )
+text = "Буквенная Карта"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="TextureButton" parent="Control/VBoxContainer"]
+margin_top = 61.0
+margin_right = 341.0
+margin_bottom = 118.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control/VBoxContainer/Button2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0.419608, 0.619608, 1 )
+text = "Тренировка слогов"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="TextureButton" parent="Control/VBoxContainer"]
+margin_top = 122.0
+margin_right = 341.0
+margin_bottom = 179.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Control/VBoxContainer/Button3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0.419608, 0.619608, 1 )
+text = "Настройки"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Control"]
+visible = false
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 1008.0
+margin_bottom = 584.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="Control/ColorRect2"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 984.0
+margin_bottom = 560.0
+color = Color( 0, 0.419608, 0.619608, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Control/ColorRect2/ColorRect3"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -40.0
+margin_right = -1.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 3 )
+text = "X"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/ColorRect2/ColorRect3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 80.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ColorRect2/ColorRect3/ScrollContainer"]
+margin_right = 14.0
+margin_bottom = 32.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/ColorRect2/ColorRect3/ScrollContainer/VBoxContainer"]
+margin_right = 976.0
+margin_bottom = 114.0
+
+[node name="ColorRect" type="ColorRect" parent="Control/ColorRect2/ColorRect3/ScrollContainer/VBoxContainer/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 969.0
+margin_bottom = 107.0
+rect_min_size = Vector2( 600, 100 )
+color = Color( 0.658824, 0.823529, 0.94902, 1 )
+
+[node name="CheckButton" type="CheckButton" parent="Control/ColorRect2/ColorRect3/ScrollContainer/VBoxContainer/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 969.0
+margin_bottom = 107.0
+rect_min_size = Vector2( 100, 0 )
+size_flags_horizontal = 8
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0.419608, 0.619608, 1 )
+text = "Альтернативный цветовой режим"
+align = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="Control/ColorRect2/ColorRect3/ScrollContainer/VBoxContainer"]
+margin_top = 118.0
+margin_right = 976.0
+margin_bottom = 297.0
+
+[node name="ColorRect" type="ColorRect" parent="Control/ColorRect2/ColorRect3/ScrollContainer/VBoxContainer/PanelContainer2"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 969.0
+margin_bottom = 172.0
+rect_min_size = Vector2( 600, 100 )
+color = Color( 0.658824, 0.823529, 0.94902, 1 )
+
+[node name="HBoxContainer" type="VBoxContainer" parent="Control/ColorRect2/ColorRect3/ScrollContainer/VBoxContainer/PanelContainer2"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 969.0
+margin_bottom = 172.0
+
+[node name="Label" type="Label" parent="Control/ColorRect2/ColorRect3/ScrollContainer/VBoxContainer/PanelContainer2/HBoxContainer"]
+margin_right = 962.0
+margin_bottom = 145.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.419608, 0.619608, 1 )
+text = "Звук
+"
+
+[node name="HSlider" type="HSlider" parent="Control/ColorRect2/ColorRect3/ScrollContainer/VBoxContainer/PanelContainer2/HBoxContainer"]
+margin_top = 149.0
+margin_right = 962.0
+margin_bottom = 165.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+value = 100.0
+[connection signal="pressed" from="Control/VBoxContainer/Button" to="." method="_on_Button_MAP_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Button2" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Button3" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="Control/ColorRect2/ColorRect3/Button" to="." method="_on_Button_Close_Setting_pressed"]
+[connection signal="pressed" from="Control/ColorRect2/ColorRect3/ScrollContainer/VBoxContainer/PanelContainer/CheckButton" to="." method="_on_CheckButton_pressed"]

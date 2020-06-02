@@ -1,0 +1,28 @@
+﻿{
+	"quests" : [{
+		"1" : {
+			"word" : "Ин-на",
+			"boxes" : [
+				"unknown_one_slot",
+				"unknown_one_slot",
+				"unknown_two_slot"
+				],
+			"answer" : [
+				"vowel",
+				"solid_consonant",
+				"solid_consonant_vowel"
+				]
+		},
+		"2" : {
+			"word" : "Три",
+			"boxes" : [
+				"unknown_one_slot",
+				"unknown_two_slot"
+				],
+			"answer" : [
+				"solid_consonant",
+				"soft_consonant_vowel"
+				]
+		}
+	}]
+}

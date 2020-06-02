@@ -1,0 +1,518 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Sprites/Map/map.jpg" type="Texture" id=1]
+[ext_resource path="res://Assets/Sprites/Map_items/treasure.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/Map_items/lock.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Scenes/MainMap.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Fonts/19413.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/Scenes/HUD.tscn" type="PackedScene" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[node name="MainMap" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 1024, 600 )
+rect_clip_content = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="ScrollContainer"]
+margin_right = 1920.0
+margin_bottom = 1920.0
+rect_min_size = Vector2( 1920, 1920 )
+
+[node name="Sprite" type="TextureRect" parent="ScrollContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="ScrollContainer/Control/Sprite"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="TextureButton" parent="ScrollContainer/Control/Sprite/Control"]
+margin_left = 520.0
+margin_top = 568.0
+margin_right = 1355.0
+margin_bottom = 1213.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Sprite/Control/Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 80.0
+margin_right = 0.000488281
+margin_bottom = 289.0
+rect_scale = Vector2( 0.9, 0.5 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="ScrollContainer/Control/Sprite/Control"]
+margin_left = 376.0
+margin_top = 528.0
+margin_right = 440.0
+margin_bottom = 615.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.164706, 0.156863, 0.156863, 1 )
+custom_colors/font_color = Color( 0.811765, 0.258824, 0.258824, 1 )
+text = "Г"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="ScrollContainer/Control/Sprite/Control"]
+margin_left = 536.0
+margin_top = 376.0
+margin_right = 603.0
+margin_bottom = 463.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.164706, 0.156863, 0.156863, 1 )
+custom_colors/font_color = Color( 0.811765, 0.258824, 0.258824, 1 )
+text = "В"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="ScrollContainer/Control/Sprite/Control"]
+margin_left = 600.0
+margin_top = 216.0
+margin_right = 663.0
+margin_bottom = 303.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.164706, 0.156863, 0.156863, 1 )
+custom_colors/font_color = Color( 0.811765, 0.258824, 0.258824, 1 )
+text = "Б"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control2" type="Control" parent="ScrollContainer/Control/Sprite"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="TextureButton" parent="ScrollContainer/Control/Sprite/Control2"]
+margin_left = 1245.0
+margin_top = 519.0
+margin_right = 2080.0
+margin_bottom = 1164.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Sprite/Control2/Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 80.0
+margin_bottom = 289.0
+rect_scale = Vector2( 0.9, 0.5 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="ScrollContainer/Control/Sprite/Control2"]
+margin_left = 1128.0
+margin_top = 432.0
+margin_right = 1191.0
+margin_bottom = 519.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.164706, 0.156863, 0.156863, 1 )
+custom_colors/font_color = Color( 0.811765, 0.258824, 0.258824, 1 )
+text = "З"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="ScrollContainer/Control/Sprite/Control2"]
+margin_left = 976.0
+margin_top = 336.0
+margin_right = 1068.0
+margin_bottom = 423.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.164706, 0.156863, 0.156863, 1 )
+custom_colors/font_color = Color( 0.811765, 0.258824, 0.258824, 1 )
+text = "Ж"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="ScrollContainer/Control/Sprite/Control2"]
+margin_left = 752.0
+margin_top = 416.0
+margin_right = 823.0
+margin_bottom = 503.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.164706, 0.156863, 0.156863, 1 )
+custom_colors/font_color = Color( 0.811765, 0.258824, 0.258824, 1 )
+text = "Д"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control3" type="Control" parent="ScrollContainer/Control/Sprite"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Button" type="TextureButton" parent="ScrollContainer/Control/Sprite/Control3"]
+margin_left = 1024.0
+margin_top = 816.0
+margin_right = 1859.0
+margin_bottom = 1461.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Sprite/Control3/Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 80.0
+margin_top = 80.0
+margin_right = 80.0
+margin_bottom = 289.0
+rect_scale = Vector2( 0.9, 0.5 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="ScrollContainer/Control/Sprite/Control3"]
+margin_left = 1176.0
+margin_top = 928.0
+margin_right = 1250.0
+margin_bottom = 1015.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.164706, 0.156863, 0.156863, 1 )
+custom_colors/font_color = Color( 0.811765, 0.258824, 0.258824, 1 )
+text = "Л"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="ScrollContainer/Control/Sprite/Control3"]
+margin_left = 1352.0
+margin_top = 856.0
+margin_right = 1420.0
+margin_bottom = 943.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.164706, 0.156863, 0.156863, 1 )
+custom_colors/font_color = Color( 0.811765, 0.258824, 0.258824, 1 )
+text = "К"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="ScrollContainer/Control/Sprite/Control3"]
+margin_left = 1424.0
+margin_top = 672.0
+margin_right = 1500.0
+margin_bottom = 759.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.164706, 0.156863, 0.156863, 1 )
+custom_colors/font_color = Color( 0.811765, 0.258824, 0.258824, 1 )
+text = "Й"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control4" type="Control" parent="ScrollContainer/Control/Sprite"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Button" type="TextureButton" parent="ScrollContainer/Control/Sprite/Control4"]
+margin_left = 603.0
+margin_top = 776.0
+margin_right = 1438.0
+margin_bottom = 1421.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Sprite/Control4/Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 80.0
+margin_bottom = 289.0
+rect_scale = Vector2( 0.9, 0.5 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="ScrollContainer/Control/Sprite/Control4"]
+margin_left = 744.0
+margin_top = 696.0
+margin_right = 819.0
+margin_bottom = 783.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.164706, 0.156863, 0.156863, 1 )
+custom_colors/font_color = Color( 0.811765, 0.258824, 0.258824, 1 )
+text = "П"
+flat = true
+
+[node name="Button3" type="Button" parent="ScrollContainer/Control/Sprite/Control4"]
+margin_left = 880.0
+margin_top = 600.0
+margin_right = 956.0
+margin_bottom = 687.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.164706, 0.156863, 0.156863, 1 )
+custom_colors/font_color = Color( 0.811765, 0.258824, 0.258824, 1 )
+text = "Н"
+flat = true
+
+[node name="Button4" type="Button" parent="ScrollContainer/Control/Sprite/Control4"]
+margin_left = 1016.0
+margin_top = 680.0
+margin_right = 1099.0
+margin_bottom = 767.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.164706, 0.156863, 0.156863, 1 )
+custom_colors/font_color = Color( 0.811765, 0.258824, 0.258824, 1 )
+text = "М"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control5" type="Control" parent="ScrollContainer/Control/Sprite"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Button" type="TextureButton" parent="ScrollContainer/Control/Sprite/Control5"]
+margin_left = 936.0
+margin_top = 1152.0
+margin_right = 1771.0
+margin_bottom = 1797.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Sprite/Control5/Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 40.0
+margin_top = 80.0
+margin_right = 40.0
+margin_bottom = 289.0
+rect_scale = Vector2( 0.9, 0.5 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="ScrollContainer/Control/Sprite/Control5"]
+margin_left = 819.0
+margin_top = 1168.0
+margin_right = 886.0
+margin_bottom = 1255.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.164706, 0.156863, 0.156863, 1 )
+custom_colors/font_color = Color( 0.811765, 0.258824, 0.258824, 1 )
+text = "Т"
+flat = true
+
+[node name="Button3" type="Button" parent="ScrollContainer/Control/Sprite/Control5"]
+margin_left = 712.0
+margin_top = 1072.0
+margin_right = 778.0
+margin_bottom = 1159.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.164706, 0.156863, 0.156863, 1 )
+custom_colors/font_color = Color( 0.811765, 0.258824, 0.258824, 1 )
+text = "С"
+flat = true
+
+[node name="Button4" type="Button" parent="ScrollContainer/Control/Sprite/Control5"]
+margin_left = 640.0
+margin_top = 952.0
+margin_right = 704.0
+margin_bottom = 1039.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.164706, 0.156863, 0.156863, 1 )
+custom_colors/font_color = Color( 0.811765, 0.258824, 0.258824, 1 )
+text = "Р"
+flat = true
+
+[node name="Control6" type="Control" parent="ScrollContainer/Control/Sprite"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Button" type="TextureButton" parent="ScrollContainer/Control/Sprite/Control6"]
+margin_left = 1016.0
+margin_top = 1400.0
+margin_right = 1851.0
+margin_bottom = 2045.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Sprite/Control6/Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 80.0
+margin_bottom = 289.0
+rect_scale = Vector2( 0.9, 0.5 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="ScrollContainer/Control/Sprite/Control6"]
+margin_left = 1168.0
+margin_top = 1384.0
+margin_right = 1245.0
+margin_bottom = 1471.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.164706, 0.156863, 0.156863, 1 )
+custom_colors/font_color = Color( 0.811765, 0.258824, 0.258824, 1 )
+text = "Ц"
+flat = true
+
+[node name="Button3" type="Button" parent="ScrollContainer/Control/Sprite/Control6"]
+margin_left = 1328.0
+margin_top = 1320.0
+margin_right = 1407.0
+margin_bottom = 1407.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.164706, 0.156863, 0.156863, 1 )
+custom_colors/font_color = Color( 0.811765, 0.258824, 0.258824, 1 )
+text = "Х"
+flat = true
+
+[node name="Button4" type="Button" parent="ScrollContainer/Control/Sprite/Control6"]
+margin_left = 1280.0
+margin_top = 1216.0
+margin_right = 1357.0
+margin_bottom = 1303.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.164706, 0.156863, 0.156863, 1 )
+custom_colors/font_color = Color( 0.811765, 0.258824, 0.258824, 1 )
+text = "Ф"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control7" type="Control" parent="ScrollContainer/Control/Sprite"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Button" type="TextureButton" parent="ScrollContainer/Control/Sprite/Control7"]
+margin_left = 472.0
+margin_top = 1552.0
+margin_right = 1307.0
+margin_bottom = 2197.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Sprite/Control7/Button"]
+anchor_top = 0.124029
+anchor_right = 0.776048
+anchor_bottom = 0.786045
+margin_left = -26.6666
+margin_top = 0.00193787
+margin_right = 45.3334
+margin_bottom = 427.002
+rect_scale = Vector2( 0.9, 0.5 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="ScrollContainer/Control/Sprite/Control7"]
+margin_left = 688.0
+margin_top = 1560.0
+margin_right = 791.0
+margin_bottom = 1647.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.164706, 0.156863, 0.156863, 1 )
+custom_colors/font_color = Color( 0.811765, 0.258824, 0.258824, 1 )
+text = "Щ"
+flat = true
+
+[node name="Button3" type="Button" parent="ScrollContainer/Control/Sprite/Control7"]
+margin_left = 808.0
+margin_top = 1488.0
+margin_right = 909.0
+margin_bottom = 1575.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.164706, 0.156863, 0.156863, 1 )
+custom_colors/font_color = Color( 0.811765, 0.258824, 0.258824, 1 )
+text = "Ш"
+flat = true
+
+[node name="Button4" type="Button" parent="ScrollContainer/Control/Sprite/Control7"]
+margin_left = 848.0
+margin_top = 1376.0
+margin_right = 918.0
+margin_bottom = 1463.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.164706, 0.156863, 0.156863, 1 )
+custom_colors/font_color = Color( 0.811765, 0.258824, 0.258824, 1 )
+text = "Ч"
+flat = true
+
+[node name="HUD" parent="." instance=ExtResource( 6 )]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control/Button" to="." method="_on_Letter_Button_pressed" binds= [ 4 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control/Button2" to="." method="_on_Letter_Button_pressed" binds= [ 3 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control/Button3" to="." method="_on_Letter_Button_pressed" binds= [ 2 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control/Button4" to="." method="_on_Letter_Button_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control2/Button" to="." method="_on_Letter_Button_pressed" binds= [ 8 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control2/Button2" to="." method="_on_Letter_Button_pressed" binds= [ 7 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control2/Button3" to="." method="_on_Letter_Button_pressed" binds= [ 6 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control2/Button4" to="." method="_on_Letter_Button_pressed" binds= [ 5 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control3/Button" to="." method="_on_Letter_Button_pressed" binds= [ 12 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control3/Button2" to="." method="_on_Letter_Button_pressed" binds= [ 11 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control3/Button3" to="." method="_on_Letter_Button_pressed" binds= [ 10 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control3/Button4" to="." method="_on_Letter_Button_pressed" binds= [ 9 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control4/Button" to="." method="_on_Letter_Button_pressed" binds= [ 16 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control4/Button2" to="." method="_on_Letter_Button_pressed" binds= [ 15 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control4/Button3" to="." method="_on_Letter_Button_pressed" binds= [ 14 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control4/Button4" to="." method="_on_Letter_Button_pressed" binds= [ 13 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control5/Button" to="." method="_on_Letter_Button_pressed" binds= [ 20 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control5/Button2" to="." method="_on_Letter_Button_pressed" binds= [ 19 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control5/Button3" to="." method="_on_Letter_Button_pressed" binds= [ 18 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control5/Button4" to="." method="_on_Letter_Button_pressed" binds= [ 17 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control6/Button" to="." method="_on_Letter_Button_pressed" binds= [ 24 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control6/Button2" to="." method="_on_Letter_Button_pressed" binds= [ 23 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control6/Button3" to="." method="_on_Letter_Button_pressed" binds= [ 22 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control6/Button4" to="." method="_on_Letter_Button_pressed" binds= [ 21 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control7/Button" to="." method="_on_Letter_Button_pressed" binds= [ 28 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control7/Button2" to="." method="_on_Letter_Button_pressed" binds= [ 27 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control7/Button3" to="." method="_on_Letter_Button_pressed" binds= [ 26 ]]
+[connection signal="pressed" from="ScrollContainer/Control/Sprite/Control7/Button4" to="." method="_on_Letter_Button_pressed" binds= [ 25 ]]
+[connection signal="back" from="HUD" to="." method="_on_HUD_back"]

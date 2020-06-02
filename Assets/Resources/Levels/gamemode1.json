@@ -1,0 +1,104 @@
+﻿{
+	"quests" : [{
+		"Б" : {
+			"solid_consonant_vowel" : ["БА", "БО",	"БУ", "БЫ", "БЭ"],
+			"soft_consonant_vowel" : ["БИ", "БЕ",	"БЯ", "БЁ", "БЮ"],
+			"soft" : "БЬ"
+		},
+		"В" : {
+			"solid_consonant_vowel" : ["ВА", "ВО",	"ВУ", "ВЫ", "ВЭ"],
+			"soft_consonant_vowel" : ["ВИ", "ВЕ",	"ВЯ", "ВЁ", "ВЮ"],
+			"soft":"ВЬ"
+		},
+		"Г" : {
+			"solid_consonant_vowel" : ["ГА", "ГО",	"ГУ", "ГЫ", "ГЭ"],
+			"soft_consonant_vowel" : ["ГИ", "ГЕ",	"ГЯ", "ГЁ", "ГЮ"],
+		},
+		"Д" : {
+			"solid_consonant_vowel" : ["ДА", "ДО",	"ДУ", "ДЫ", "ДЭ"],
+			"soft_consonant_vowel" : ["ДИ", "ДЕ",	"ДЯ", "ДЁ", "ДЮ"],
+			"soft" : "ДЬ"
+		},
+		"Ж" : {
+			"solid_consonant_vowel" : ["ЖА", "ЖО", "ЖУ"],
+			"soft_consonant_vowel" : ["ЖИ", "ЖЕ", "ЖЁ", "ЖЮ"],
+			"solid" : "ЖЬ"
+		},
+		"З" : {
+			"solid_consonant_vowel" : ["ЗА", "ЗО",	"ЗУ", "ЗЫ", "ЗЭ"],
+			"soft_consonant_vowel" : ["ЗИ", "ЗЕ",	"ЗЯ", "ЗЁ", "ЗЮ"],
+			"soft" : "ЗЬ"
+		},
+		"Й" : {
+			"solid_consonant_vowel" : ["ЙА", "ЙО", "ЙУ"],
+			"soft_consonant_vowel" : ["ЙИ", "ЙЕ"],
+		},
+		"К" : {
+			"solid_consonant_vowel" : ["КА", "КО",	"КУ", "КЫ", "КЭ"],
+			"soft_consonant_vowel" : ["КИ", "КЕ",	"КЯ", "КЁ", "КЮ"],
+		},
+		"Л" : {
+			"solid_consonant_vowel" : ["ЛА", "ЛО",	"ЛУ", "ЛЫ", "ЛЭ"],
+			"soft_consonant_vowel" : ["ЛИ", "ЛЕ",	"ЛЯ", "ЛЁ", "ЛЮ"],
+			"soft" : "ЛЬ"
+		},
+		"М" : {
+			"solid_consonant_vowel" : ["МА", "МО",	"МУ", "МЫ", "МЭ"],
+			"soft_consonant_vowel" : ["МИ", "МЕ",	"МЯ", "МЁ", "МЮ"],
+			"soft" : "МЬ"
+		},
+		"Н" : {
+			"solid_consonant_vowel" : ["НА", "НО",	"НУ", "НЫ", "НЭ"],
+			"soft_consonant_vowel" : ["НИ", "НЕ",	"НЯ", "НЁ", "НЮ"],
+			"soft" : "НЬ"
+		},
+		"П" : {
+			"solid_consonant_vowel" : ["ПА", "ПО",	"ПУ", "ПЫ", "ПЭ"],
+			"soft_consonant_vowel" : ["ПИ", "ПЕ",	"ПЯ", "ПЁ", "ПЮ"],
+			"soft" : "ПЬ"
+		},
+		"Р" : {
+			"solid_consonant_vowel" : ["РА", "РО",	"РУ", "РЫ", "РЭ"],
+			"soft_consonant_vowel" : ["РИ", "РЕ",	"РЯ", "РЁ", "РЮ"],
+			"soft" : "РЬ"
+		},
+		"С" : {
+			"solid_consonant_vowel" : ["СА", "СО",	"СУ", "СЫ", "СЭ"],
+			"soft_consonant_vowel" : ["СИ", "СЕ",	"СЯ", "СЁ", "СЮ"],
+			"soft" : "СЬ"
+		},
+		"Т" : {
+			"solid_consonant_vowel" : ["ТА", "ТО",	"ТУ", "ТЫ", "ТЭ"],
+			"soft_consonant_vowel" : ["ТИ", "ТЕ",	"ТЯ", "ТЁ", "ТЮ"],
+			"soft" : "ТЬ"
+		},
+		"Ф" : {
+			"solid_consonant_vowel" : ["ФА", "ФО",	"ФУ", "ФЫ", "ФЭ"],
+			"soft_consonant_vowel" : ["ФИ", "ФЕ",	"ФЯ", "ФЁ", "ФЮ"],
+			"soft" : "ФЬ"
+		},
+		"Х" : {
+			"solid_consonant_vowel" : ["ХА", "ХО",	"ХУ", "ХЫ", "ХЭ"],
+			"soft_consonant_vowel" : ["ХИ", "ХЕ",	"ХЯ", "ХЁ", "ХЮ"],
+		},
+		"Ц" : {
+			"solid_consonant_vowel" : ["ЦА", "ЦО",	"ЦУ", "ЦЫ"],
+			"soft_consonant_vowel" : ["ЦИ","ЦЕ", "ЦЮ"],
+		},
+		"Ч" : {
+			"solid_consonant_vowel" : ["ЧА", "ЧО",	"ЧУ"],
+			"soft_consonant_vowel" : ["ЧИ", "ЧЕ", "ЧЁ"],
+			"soft" : "ЧЬ"
+		},
+		"Ш" : {
+			"solid_consonant_vowel" : ["ША", "ШО",	"ШУ"],
+			"soft_consonant_vowel" : ["ШИ", "ШЕ", "ШЁ"],
+			"solid" : "ШЬ"
+		},
+		"Щ" : {
+			"solid_consonant_vowel" : ["ЩА", "ЩО",	"ЩУ"],
+			"soft_consonant_vowel" : ["ЩИ", "ЩЕ", "ЩЁ", "ЩЮ"],
+			"soft" : "ЩЬ"
+		},
+	}]
+}
