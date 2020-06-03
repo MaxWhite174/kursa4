@@ -30,7 +30,6 @@ func _ready():
 	start(_data)
 	
 func start(_data):
-	print("quest : ",_data)
 	data = _data
 	arr_level = data.keys()
 	lvl_now = "1"
@@ -39,14 +38,12 @@ func start(_data):
 	
 
 func create_level(lvl="1"):
-	print("create_level = lvl = ", lvl )
 	var quest = data[lvl]
 	quest_answer = quest.answer.duplicate()
 	#quest_answer.append(quest["answer"])
 	$MainControl/Control/ColorRect/Label.text = quest.word
 	for icon in quest.boxes:
 		var item = box_scene.instance()
-		print(icon)
 		item.texture = load("res://Assets/Sprites/Boxes/%s.png" % icon)
 		item.title = "Answer"
 		
@@ -79,7 +76,6 @@ func create_level(lvl="1"):
 			else:
 				tmp = arr_boxes.pop_front()
 		var item_answ = box_scene.instance()
-		print(tmp," ", i_box)
 		var box_answ = ItemDB.ITEMS[tmp]
 		item_answ.texture = load(box_answ.icon)
 		item_answ.title = "Variant"
@@ -101,9 +97,7 @@ func level_continue():
 	arr_answers.clear()
 	arr_variant.clear()
 	var lvl_next = arr_level[arr_level.find(lvl_now)+1]
-	print("lvl_next ",lvl_next)
-	print("lvl_now ",lvl_now)
-	print("lvl_max ",lvl_max)
+
 	if int(lvl_max) <= int(lvl_next):
 		create_level(lvl_next)
 	else:
@@ -112,7 +106,6 @@ func level_continue():
 
 func _on_Go_Button_pressed():
 	for item in arr_answers:
-		#print(item.answer, " - ", quest_answer)
 		if item:
 			if item.answer in quest_answer:
 				score+=1

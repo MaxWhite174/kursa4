@@ -142,13 +142,12 @@ func _ready():
 func button_disabler():
 	var lvl = 1
 	while lvl <= lvl_data.size():
-		print(lvl)
 		if not (lvl in levels_complete) and not (lvl in start_lvl):
-			print("ne govno")
+			
 			lvl_data[lvl].node.disabled = true
 			lvl+=1
 		elif lvl%4==0 and lvl in levels_complete:
-			print("govno:",lvl," ",lvl+1," ",lvl+2," ",lvl+3)
+			
 			lvl_data[lvl+3].node.disabled = false
 			lvl_data[lvl+2].node.disabled = false
 			lvl_data[lvl+1].node.disabled = false
@@ -175,7 +174,6 @@ func button_check_point_availbler():
 				_tmp_lvl_arr.clear()
 
 func _on_Letter_Button_pressed(id):
-	print(id)
 	if id%4==0:
 		G.lvl_data = lvl_data
 		G.tmp_level = id

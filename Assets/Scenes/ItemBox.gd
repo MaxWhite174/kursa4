@@ -10,14 +10,11 @@ func _ready():
 	
 func get_drag_data(_pos):
 	if self.title == "Variant":
-		print(self.slot)
-		# Use another colorpicker as drag preview
 		var cpb = TextureRect.new()
 		cpb.texture = texture
 		cpb.rect_size = Vector2(50, 50)
 		cpb.rect_pivot_offset = cpb.rect_size/2
 		set_drag_preview(cpb)
-		# Return color as drag data
 		return [texture, self.slot, self]
 	else:
 		return null
