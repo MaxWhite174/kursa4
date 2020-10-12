@@ -44,6 +44,8 @@ func create_level(lvl="1"):
 	$MainControl/Control/ColorRect/Label.text = quest.word
 	for icon in quest.boxes:
 		var item = box_scene.instance()
+		if LoadAndSave.data.options.alternative_color_mode and not icon.begins_with("unknown_"):
+			icon = "another_" + icon
 		item.texture = load("res://Assets/Sprites/Boxes/%s.png" % icon)
 		item.title = "Answer"
 		

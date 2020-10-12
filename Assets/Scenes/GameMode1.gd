@@ -76,7 +76,7 @@ func _on_Answer_Button_pressed(answer):
 		else:
 			LoadAndSave.data.player.mod1.levels_complete.append(lvl_number)
 			LoadAndSave.save_data()
-			get_tree().change_scene("res://MainMap.tscn")
+			get_tree().change_scene("res://Assets/Scenes/MainMap.tscn")
 		
 	else:
 		$MainControl/AnimationPlayer.play("bad")
@@ -85,7 +85,7 @@ func _on_Answer_Button_pressed(answer):
 
 
 func _on_HUD_back():
-	get_tree().change_scene("res://MainMap.tscn")
+	get_tree().change_scene("res://Assets/Scenes/MainMap.tscn")
 
 
 func _on_HUD_help():

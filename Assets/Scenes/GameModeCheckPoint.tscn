@@ -1,17 +1,20 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://icons/solid_consonant.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Sprites/Boxes/soft_consonant.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Sprites/Boxes/solid_consonant_vowel.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Fonts/19413.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Sprites/Boxes/soft_consonant_vowel.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Scenes/HUD.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Sprites/Boxes/solid_consonant.png" type="Texture" id=6]
 [ext_resource path="res://icons/soft_consonant_vowel.png" type="Texture" id=7]
-[ext_resource path="res://icons/solid_consonant_vowel.png" type="Texture" id=8]
-[ext_resource path="res://icons/soft_consonant.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Scenes/GameModeCheckPoint.gd" type="Script" id=10]
 [ext_resource path="res://icons/black-vignette.png" type="Texture" id=11]
 [ext_resource path="res://icons/vignette-effect-png-2-transparent.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFont" id=1]
-size = 90
+size = 120
+outline_size = 2
+outline_color = Color( 0, 0.329412, 0.423529, 1 )
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -88,7 +91,7 @@ __meta__ = {
 [node name="ColorRect" type="ColorRect" parent="MainControl"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.345098, 0.337255, 0.337255, 1 )
+color = Color( 0.658824, 0.823529, 0.94902, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -109,7 +112,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 90.0
 margin_right = -90.0
-color = Color( 0.254902, 0.239216, 0.239216, 1 )
+color = Color( 0.254902, 0.239216, 0.239216, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -128,6 +131,7 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0.419608, 0.619608, 1 )
 text = "БА"
 align = 1
 valign = 1
@@ -225,7 +229,7 @@ anchor_bottom = 1.0
 margin_left = 30.0
 margin_right = -30.0
 margin_bottom = 1.0
-color = Color( 0.427451, 0.411765, 0.411765, 1 )
+color = Color( 0.52549, 0.768627, 0.92549, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -246,9 +250,9 @@ __meta__ = {
 margin_left = 112.0
 margin_top = 22.0
 margin_right = 212.0
-margin_bottom = 122.0
+margin_bottom = 123.0
 size_flags_vertical = 4
-texture_normal = ExtResource( 9 )
+texture_normal = ExtResource( 1 )
 stretch_mode = 3
 
 [node name="TextureRect3" type="TextureButton" parent="MainControl/Control3/ColorRect/OptionHBox"]
@@ -257,7 +261,7 @@ margin_top = 22.0
 margin_right = 452.0
 margin_bottom = 123.0
 size_flags_vertical = 4
-texture_normal = ExtResource( 7 )
+texture_normal = ExtResource( 4 )
 stretch_mode = 3
 
 [node name="TextureRect4" type="TextureButton" parent="MainControl/Control3/ColorRect/OptionHBox"]
@@ -266,16 +270,16 @@ margin_top = 22.0
 margin_right = 592.0
 margin_bottom = 123.0
 size_flags_vertical = 4
-texture_normal = ExtResource( 1 )
+texture_normal = ExtResource( 6 )
 stretch_mode = 3
 
 [node name="TextureRect5" type="TextureButton" parent="MainControl/Control3/ColorRect/OptionHBox"]
 margin_left = 632.0
 margin_top = 22.0
-margin_right = 832.0
+margin_right = 831.0
 margin_bottom = 123.0
 size_flags_vertical = 4
-texture_normal = ExtResource( 8 )
+texture_normal = ExtResource( 2 )
 stretch_mode = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MainControl"]

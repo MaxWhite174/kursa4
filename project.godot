@@ -25,6 +25,10 @@ G="*res://Assets/Singletons/global.gd"
 LoadAndSave="*res://Assets/Singletons/Load_and_Save.gd"
 ItemDB="*res://Assets/Singletons/ItemDB.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 item_grab={

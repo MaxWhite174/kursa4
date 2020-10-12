@@ -16,7 +16,7 @@ var data = {}
 func loading_data():
 	var dict = {}
 	var file = File.new()
-	var path_data = "res://gm2_data/gamemode1.json"
+	var path_data = "res://Assets/Resources/Levels/gamemode1.json"
 	file.open(path_data, file.READ)
 	var text = file.get_as_text()
 	dict = parse_json(text)
@@ -73,14 +73,14 @@ func _on_Answer_Button_pressed(answer):
 			if not lvl_number in LoadAndSave.data.player.mod1.levels_complete:
 				LoadAndSave.data.player.mod1.levels_complete.append(lvl_number)
 			LoadAndSave.save_data()
-			get_tree().change_scene("res://MainMap.tscn")
+			get_tree().change_scene("res://Assets/Scenes/MainMap.tscn")
 		
 	else:
 		$MainControl/AnimationPlayer.play("bad")
 
 
 func _on_HUD_back():
-	get_tree().change_scene("res://MainMap.tscn")
+	get_tree().change_scene("res://Assets/Scenes/MainMap.tscn")
 
 
 func _on_HUD_help():

@@ -1,35 +1,31 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://icons/solid_consonant.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Sprites/Boxes/soft_consonant.png" type="Texture" id=1]
 [ext_resource path="res://icons/pngwing.com (3).png" type="Texture" id=2]
 [ext_resource path="res://Assets/Fonts/19413.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Assets/Sprites/HUD/info-icon.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Sprites/HUD/back-icon.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprites/Boxes/solid_consonant_vowel.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Scenes/HUD.tscn" type="PackedScene" id=6]
 [ext_resource path="res://icons/soft_consonant_vowel.png" type="Texture" id=7]
-[ext_resource path="res://icons/solid_consonant_vowel.png" type="Texture" id=8]
-[ext_resource path="res://icons/soft_consonant.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sprites/Boxes/soft_consonant_vowel.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sprites/Boxes/solid_consonant.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Scenes/GameMode1.gd" type="Script" id=10]
 [ext_resource path="res://icons/black-vignette.png" type="Texture" id=11]
 [ext_resource path="res://icons/vignette-effect-png-2-transparent.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFont" id=1]
-size = 60
-font_data = ExtResource( 3 )
-
-[sub_resource type="DynamicFont" id=2]
 size = 120
 outline_size = 1
 outline_color = Color( 0, 0.329412, 0.423529, 1 )
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 100
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "bad"
 length = 0.2
 tracks/0/type = "value"
@@ -57,7 +53,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimationPlayer/Sprite:visible")
@@ -98,27 +94,6 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.658824, 0.823529, 0.94902, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="MainControl/ColorRect"]
-visible = false
-margin_left = 81.0
-margin_top = 8.0
-margin_right = 256.0
-margin_bottom = 69.0
-custom_fonts/font = SubResource( 1 )
-text = "Score: "
-
-[node name="BackButton2" type="TextureButton" parent="MainControl/ColorRect"]
-visible = false
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 1608.0
-margin_bottom = 1608.0
-rect_scale = Vector2( 0.03, 0.03 )
-texture_normal = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -178,7 +153,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="MainControl/Control/ColorRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0.419608, 0.619608, 1 )
 text = "БА"
 align = 1
@@ -225,7 +200,7 @@ margin_left = 25.0
 margin_top = 21.0
 margin_right = 160.0
 margin_bottom = 122.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "БО"
 
 [node name="Label2" type="Label" parent="MainControl/Control2/ColorRect/AnswerHBox"]
@@ -233,7 +208,7 @@ margin_left = 175.0
 margin_top = 21.0
 margin_right = 312.0
 margin_bottom = 122.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "БА"
 
 [node name="Label3" type="Label" parent="MainControl/Control2/ColorRect/AnswerHBox"]
@@ -241,7 +216,7 @@ margin_left = 327.0
 margin_top = 21.0
 margin_right = 466.0
 margin_bottom = 122.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "БЯ"
 
 [node name="Label4" type="Label" parent="MainControl/Control2/ColorRect/AnswerHBox"]
@@ -249,7 +224,7 @@ margin_left = 481.0
 margin_top = 21.0
 margin_right = 644.0
 margin_bottom = 122.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "БЮ"
 
 [node name="Label5" type="Label" parent="MainControl/Control2/ColorRect/AnswerHBox"]
@@ -257,7 +232,7 @@ margin_left = 659.0
 margin_top = 21.0
 margin_right = 818.0
 margin_bottom = 122.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "БЫ"
 
 [node name="Control3" type="Control" parent="MainControl"]
@@ -298,9 +273,9 @@ __meta__ = {
 margin_left = 112.0
 margin_top = 22.0
 margin_right = 212.0
-margin_bottom = 122.0
+margin_bottom = 123.0
 size_flags_vertical = 4
-texture_normal = ExtResource( 9 )
+texture_normal = ExtResource( 1 )
 stretch_mode = 3
 
 [node name="TextureRect3" type="TextureButton" parent="MainControl/Control3/ColorRect/OptionHBox"]
@@ -309,7 +284,7 @@ margin_top = 22.0
 margin_right = 452.0
 margin_bottom = 123.0
 size_flags_vertical = 4
-texture_normal = ExtResource( 7 )
+texture_normal = ExtResource( 8 )
 stretch_mode = 3
 
 [node name="TextureRect4" type="TextureButton" parent="MainControl/Control3/ColorRect/OptionHBox"]
@@ -318,21 +293,21 @@ margin_top = 22.0
 margin_right = 592.0
 margin_bottom = 123.0
 size_flags_vertical = 4
-texture_normal = ExtResource( 1 )
+texture_normal = ExtResource( 9 )
 stretch_mode = 3
 
 [node name="TextureRect5" type="TextureButton" parent="MainControl/Control3/ColorRect/OptionHBox"]
 margin_left = 632.0
 margin_top = 22.0
-margin_right = 832.0
+margin_right = 831.0
 margin_bottom = 123.0
 size_flags_vertical = 4
-texture_normal = ExtResource( 8 )
+texture_normal = ExtResource( 5 )
 stretch_mode = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MainControl"]
-anims/bad = SubResource( 4 )
-anims/good = SubResource( 5 )
+anims/bad = SubResource( 3 )
+anims/good = SubResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="MainControl/AnimationPlayer"]
 visible = false
@@ -350,7 +325,6 @@ scale = Vector2( 1.6, 1.5 )
 texture = ExtResource( 12 )
 
 [node name="HUD" parent="." instance=ExtResource( 6 )]
-[connection signal="pressed" from="MainControl/ColorRect/BackButton2" to="." method="_on_BackButton2_pressed"]
 [connection signal="pressed" from="MainControl/Control/ColorRect/Button" to="." method="_on_Reset_Button_pressed"]
 [connection signal="pressed" from="MainControl/Control/ColorRect/Button2" to="." method="_on_Go_Button_pressed"]
 [connection signal="pressed" from="MainControl/Control3/ColorRect/OptionHBox/TextureRect2" to="." method="_on_Answer_Button_pressed" binds= [ "soft" ]]
